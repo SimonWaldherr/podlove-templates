@@ -1,7 +1,8 @@
-<h3>{{ episode.subtitle }}</h3>
-{{ episode.summary }}
 {{ episode.player }}<br>
-[podlove-episode-downloads style="buttons"]
-<a rel="license" href="{{ episode.license.url }}"><img alt="{{ episode.license.name }}" style="vertical-align:top" align="right" src="{{ episode.license.imageUrl }}"/></a>
+<table>
+ <tr><td><a rel="license" href="{{ episode.license.url }}"><img alt="{{ episode.license.name }}" src="{{ episode.license.imageUrl }}" style="vertical-align:middle"/></a></td>
+ <td>[podlove-episode-downloads]
+</td></tr>
+</table>
 [podlove-episode-contributor-list]
 <h1>Notes and References</h1>
