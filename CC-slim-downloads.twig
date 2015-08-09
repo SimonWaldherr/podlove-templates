@@ -9,7 +9,7 @@
     {% set asset = file.asset %}
     {% if asset.downloadable %}
     <td>
-      <a href="{{ file.publicUrl}}">{{ asset.title }}</a> ({{ file.size|formatBytes }})
+      <a href="{{ file.publicUrl("downloads", "buttonlist") }}">{{ asset.title }}</a> ({{ file.size|formatBytes }})
     </td>
     {% endif %}
 	{% endfor %}
