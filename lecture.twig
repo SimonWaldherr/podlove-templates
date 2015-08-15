@@ -1,4 +1,10 @@
 {{ episode.player }}<br>
+{%if episode.summary %}
+<div style="float:right">
+    {{ flattr.button({ style: 'large' }) }}
+</div>
+<p>{{ episode.summary }}</p>
+{% endif %}
 [podlove-template template="CC-button-downloads"]
 [podlove-episode-contributor-list flattr="yes"]
 <h1>Notes and References</h1>

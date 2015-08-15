@@ -1,5 +1,8 @@
-{{ episode.summary }}<br/><br/>
 {{ episode.player }}
+<div style="float:right">
+    {{ flattr.button({ style: 'large' }) }}
+</div>
+<p>{{ episode.summary }}</p>
 [podlove-template template="CC-select-downloads"]
 [podlove-episode-contributor-list flattr="yes" groupby="group"]
 <h1>Sendungsnotizen</h1>
