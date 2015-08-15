@@ -4,12 +4,11 @@
       <img alt="{{ episode.license.name }}" src="{{ episode.license.imageUrl }}" style="vertical-align:middle"/>
     </a>
   </td>
-  <td><strong>Downloads:</strong></td>
+  <td><strong>⬇ Downloads:</strong></td>
   {% for file in episode.files %}
-    {% set asset = file.asset %}
-    {% if asset.downloadable %}
+    {% if file.asset.downloadable %}
     <td>
-      <a href="{{ file.publicUrl("downloads", "buttonlist") }}">{{ asset.title }}</a> ({{ file.size|formatBytes }})
+      <a href="{{ file.publicUrl("downloads", "buttonlist") }}">{{ file.asset.title }}</a> ({{ file.size|formatBytes }})
     </td>
     {% endif %}
 	{% endfor %}
